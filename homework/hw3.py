@@ -25,3 +25,4 @@ while q2 <= 12:
     q2 += 1
 
 #q3
+#step through string with -2
