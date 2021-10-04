@@ -30,3 +30,6 @@ print("Your selection:", candyList)
 
 candyList.sort()
 print("This is your sorted list:", candyList)
+
+candyList.reverse()
+print("This is your reversed sorted list:", candyList)
