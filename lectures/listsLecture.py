@@ -33,3 +33,17 @@ methods:
 - pop - removes and returns specific item in list (index)
 
 '''
+
+# IMPORTANT:
+list1 = [1, 2, 3, 4, 5]
+list2 = list1
+list2[1] = 555 #THIS CHANGES BOTH LISTS
+print(list1)
+print(list2)
+
+import copy
+list3 = [5, 6, 7, 8, 9]
+list4 = copy.deepcopy(list3)
+list4[1] = 666 #ONLY LIST4 CHANGES
+print(list3)
+print(list4)
