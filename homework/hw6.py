@@ -25,3 +25,14 @@ prices = {
 
 total = 0
 for item in vaca_supplies:
+    total += prices[item]
+print("Total for all possible items:", total)
+
+total = 0 # reset total for second loop
+for item in vaca_supplies:
+    if stock[item] > 0:
+        total += prices[item]
+        stock[item] -= 1
+
+print("Total for all items in stock:", total)
+print("What is left in stock:", stock)
