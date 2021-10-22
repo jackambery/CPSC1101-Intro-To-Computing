@@ -31,11 +31,11 @@ def main():
             printBal(balance)
         if choice == 'b':
             amount = int(input("How much would you like to deposit?\n"))
-            deposit(balance, amount)
+            balance = deposit(balance, amount)
             printBal(balance)
         if choice == 'c':
             amount = int(input("How much would you like to withdrawl?\n"))
-            withdrawl(balance, amount)
+            balance = withdrawl(balance, amount)
             printBal(balance)
         choice = input("What would you like to do?\n")
     # if d is selected
