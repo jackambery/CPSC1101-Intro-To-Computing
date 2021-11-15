@@ -9,21 +9,24 @@
 
 class Square:
     def __init__(self, length, color):
-        self.length = length
+        self.length = int(length)
         self.color = color
 
     def __repr__(self):
-        s = "Hello I am a square. My sides are " + str(self.length) + " units long and I am " + self.color
+        s = "Hello I am a square. My sides are " + str(self.getSide()) + " units long and I am " + self.getColor() + "."
         return s
 
+    #returns int
     def getSide(self):
         return self.length
 
+    #returns int
     def getArea(self):
-        return int(self.length) * int(self.length)
+        return self.length * self.length
 
+    #returns int
     def getPerimeter(self):
-        return 4 * int(self.length)
+        return 4 * self.length
 
     def setColor(self, newColor):
         self.color = newColor
@@ -32,6 +35,7 @@ class Square:
         return self.color
 
     def describe(self):
-        return repr(self)
+        return "I am a " + self.getColor() + " square with a side length of " + str(self.getSide()) + "."
+        # return self.__repr__ ?
 
     
