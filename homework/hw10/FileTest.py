@@ -12,25 +12,32 @@ class FileTest:
     def main():
 
         theReader = FileReader()
-        theReader.write("Hello world!!!!!!!!!!!!!!!!")
 
         while (True):
             menu()
-            if choice == 'a':
-                printBal(balance)
-            elif choice == 'b':
-                amount = int(input("How much would you like to deposit?\n"))
-                balance = deposit(balance, amount)
-                printBal(balance)
-            elif choice == 'c':
-                amount = int(input("How much would you like to withdrawl?\n"))
-                balance = withdrawl(balance, amount)
-                printBal(balance)
+            if choice == '1':
+                message = input("What would you like to write?\n")
+                theReader.write(message)
+            elif choice == '2':
+                theReader.read()
+            elif choice == '3':
+                message = input("What would you like to write?\n")
+                theReader.append(message)
+            elif choice == '4':
+                message = input("What would you like to write?\n")
+                theReader.writeCSV(message)
+            elif choice == '5':
+                theReader.readCSV()
+            elif choice == '6':
+                message = input("What would you like to write?\n")
+                theReader.appendCSV(message)
+            elif choice == '7':
+                quit()
             else:
                 print("invalid selection")
             choice = input("What would you like to do?\n")
-        # if d is selected
-        print("Have a nice day!")
+        # # if d is selected
+        # print("Have a nice day!")
 
     if __name__ == "__main__":
         main()
