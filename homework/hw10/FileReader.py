@@ -22,18 +22,39 @@ class FileReader:
         with open(self.outputFile, "w") as outfile:
             outfile.write(message)
 
+    # this function uses (optional) try and except statements
+    # since I use a class varible for the file names, it should never reach those,
+    # but it would have been good to use them from the start
     def read(self):
-        with open(self.outputFile, "r") as outfile:
-            print(outfile.read())
+        try:
+            
+            with open(self.outputFile, "r") as outfile:
+             print(outfile.read())
+        
+        except FileNotFoundError as f:
+            print("no file: ", str(f))
+        except Exception as e:
+            print("error:", str(e))
 
     def append(self, message):
         with open(self.outputFile, "a") as outfile:
             outfile.write(message)
 
-    def writeCSV(self, list):
+    # right now this method does not take user input and has a pretyped set of data
+    # to test the method
+    def writeCSV(self):
+
+        csvRow = ['Name', 'Age', 'Major']
+        students = [
+            ['Jack', '19', 'Comp Sci'],
+            ['Joe', '17', 'Mech. Engineering'],
+            ['Em', '20', 'English']
+        ]
+
         with open(self.outputFileCSV, "w", newline = "") as outfile:
             writer = csv.writer(outfile)
-            writer.writerows(list)
+            writer.writerow(csvRow)
+            writer.writerows(students)
 
     def readCSV(self):
         with open(self.outputFileCSV, newline = "") as outfile:

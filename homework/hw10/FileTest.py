@@ -23,10 +23,11 @@ class FileTest:
             elif choice == '3':
                 message = input("What would you like to append to the file?\n")
                 theReader.append(message)
+            # does not take user input right now
             elif choice == '4':
                 print("ex. [ [key, value], [key, value], [key, value, value] ]")
                 message = input("What would you like to write to the CSV?\n")
-                theReader.writeCSV(message)
+                theReader.writeCSV()
             elif choice == '5':
                 theReader.readCSV()
             elif choice == '6':
