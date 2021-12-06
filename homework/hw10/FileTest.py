@@ -24,19 +24,20 @@ class FileTest:
                 message = input("What would you like to append to the file?\n")
                 theReader.append(message)
             elif choice == '4':
+                print("ex. [ [key, value], [key, value], [key, value, value] ]")
                 message = input("What would you like to write to the CSV?\n")
                 theReader.writeCSV(message)
             elif choice == '5':
                 theReader.readCSV()
             elif choice == '6':
+                print("ex. [ [key, value], [key, value], [key, value, value] ]")
                 message = input("What would you like to append to the CSV?\n")
                 theReader.appendCSV(message)
             elif choice == '7':
+                print("Have a nice day!")
                 quit()
             else:
                 print("invalid selection")
-        # # if d is selected
-        # print("Have a nice day!")
 
     if __name__ == "__main__":
         main()
