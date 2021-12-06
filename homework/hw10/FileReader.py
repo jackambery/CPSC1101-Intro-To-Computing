@@ -11,6 +11,7 @@ class FileReader:
 
     def __init__(self):
         self.outputFile = "homework\hw10\\result.txt"
+        self.outputFileCSV = "homework\hw10\\resultCSV.txt"
     
     def __repr__(self):
         print("I write, read, and append to files!")
@@ -27,11 +28,14 @@ class FileReader:
         outfile = open(self.outputFile, "a")
         outfile.write(message)
 
-    def writeCSV(self):
-        return
+    def writeCSV(self, message):
+        outfile = open(self.outputFileCSV, "w")
+        outfile.write(message)
 
     def readCSV(self):
-        return
+        outfile = open(self.outputFileCSV, "r")
+        print(outfile.read())
 
-    def appendCSV(self):
-        return
+    def appendCSV(self, message):
+        outfile = open(self.outputFileCSV, "a")
+        outfile.write(message)
