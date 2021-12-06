@@ -1,6 +1,6 @@
-# Lab 8
-# CS 101: Lab #8
-# Filename: lab8.py
+# Lab 9
+# CS 101: Lab #9
+# Filename: lab9.py
 # Date: 6 Dec 2021
 #
 # Name: John (Jack) Ambery
